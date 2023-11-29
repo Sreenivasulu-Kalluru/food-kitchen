@@ -1,21 +1,19 @@
-<div align="center" id="#readme-top">
-
-  <h1><b>Food Kitchen A Food Ordering Website</b></h3>
-</div>
-
 <!-- PROJECT DESCRIPTION -->
 
-# 🚀 [Spicey Pricey] <a name="about-project"></a>
+# Food Kitchen
 
-> Food Kitchen, a React.js-based food ordering app, seamlessly connects users with their favorite dishes through the live Swiggy API. With Redux for state management, React Router DOM for smooth navigation, and Tailwind CSS for a visually appealing interface, it offers a modern and efficient way to explore, order, and enjoy a diverse range of culinary delights.
+## Food Kitchen A Food Ordering Website
 
-## 🛠 Built With <a name="built-with"></a>
+> Food Kitchen, a React.js-based food ordering website, seamlessly connects users with their favorite dishes through the live Swiggy API. With Redux for state management, React Router DOM for smooth navigation, and Tailwind CSS for a visually appealing interface, it offers a modern and efficient way to explore, order, and enjoy a diverse range of culinary delights.
 
-### Tech Stack <a name="tech-stack"></a>
+## 🛠 Built With
 
-- ReactJs
-- **Redux**
-- Tailwind-CSS
+### Tech Stack
+
+- **React.js**
+- **Tailwind-CSS**
+- **React-Router-Dom**
+- **Redux.js**
 
 <!-- Features -->
 
@@ -35,6 +33,6 @@
 
 > ✅ Shimmer UI: Food Kitchen enhances user interface transitions with shimmer UI, providing a visually appealing loading effect during data retrieval, creating a polished and engaging experience for users while waiting for content to load.
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo
 
-### Live Website Preview : <a href="https://spicy-pricey-food-delivery.vercel.app/" target="_blank">https://spicy-pricey-food-delivery.vercel.app/</a>
+### [Live Website Preview]()
