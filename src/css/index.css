@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: 'Grotesque Pro Thin';
   font-weight: 300;
@@ -260,8 +264,19 @@ body.modal-active {
 
 .landingpagebg {
   background: url('/images/landingpage.webp');
+  position: relative;
   background-size: cover;
   background-position: center;
+}
+
+.landingpagebg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {

@@ -59,16 +59,16 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="pb-14">
+    <div className="pb-14 max-sm:bg-gradient-to-r">
       <div className="flex flex-col h-screen pb-32 lg:flex-row md:pb-0">
         <div className="relative w-full px-3 py-32 lg:w-1/2 sm:px-16 2xl:px-28">
           <img
             src="/images/landingpage.webp"
             alt="img"
-            className="absolute top-0 bottom-0 left-0 right-0 block object-cover w-full h-screen blur-md lg:hidden"
+            className="absolute top-0 bottom-0 left-0 right-0 block object-cover w-full h-screen lg:hidden"
           />
           <div className="relative 2xl:w-4/5">
-            <div className="flex items-center gap-3 text-white lg:text-black text-shadow">
+            <div className="flex items-center gap-3 text-white lg:text-black">
               <img
                 src={LOGO_URL}
                 alt="img"
@@ -78,7 +78,7 @@ const LandingPage = () => {
                 Food Kitchen
               </span>
             </div>
-            <div className="mt-10 mb-4 text-shadow">
+            <div className="mt-10 mb-4">
               <h2 className="font-ProximaNovaSemiBold text-3xl text-white lg:text-[#282c3f]">
                 {ChangingText}
               </h2>
@@ -110,7 +110,7 @@ const LandingPage = () => {
                   ))}
               </ul>
             </div>
-            <div className="text-shadow">
+            <div>
               <p className="font-ProximaNovaThin text-[15px] text-white lg:text-[#a9abb2] mt-7 mb-2 uppercase">
                 Popular Cities in India
               </p>
