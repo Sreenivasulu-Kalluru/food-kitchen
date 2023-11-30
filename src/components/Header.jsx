@@ -133,7 +133,7 @@ const Header = () => {
           className="absolute text-3xl cursor-pointer right-5 top-6"
           onClick={handleMenu}
         >
-          <MdOutlineRestaurantMenu className="transition-all rotate-90 hover:opacity-70" />
+          <MdOutlineRestaurantMenu className="transition-all hover:opacity-70" />
         </div>
 
         <ul className="flex flex-col items-center justify-center h-full gap-16 text-2xl text-customblack-1 font-GrotBlack">
