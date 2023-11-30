@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { LOGO_URL } from '../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { IoMdCloseCircleOutline } from 'react-icons/io';
+import { IoIosRestaurant } from 'react-icons/io';
 import { toggleMenu, toggleModal } from '../utils/toggleSlice';
 import { CiLocationOn } from 'react-icons/ci';
 
@@ -51,7 +51,7 @@ const Header = () => {
             {UserLocation?.address && (
               <button
                 type="button"
-                className="xl:hidden text-sm ml-2 sm:ml-5 cursor-pointer text-[#686b78] font-ProximaNovaThin text-center flex gap-1"
+                className="xl:hidden text-sm ml-2 sm:ml-5 cursor-pointer text-[#686b78] hover:text-black transition font-ProximaNovaThin text-center flex gap-1"
                 onClick={handleModal}
               >
                 <div className="text-xl">
@@ -119,7 +119,7 @@ const Header = () => {
             className="mr-1 text-2xl cursor-pointer xl:hidden"
             onClick={handleMenu}
           >
-            <MdOutlineRestaurantMenu />
+            <IoIosRestaurant className="transition-all rotate-90 hover:opacity-70" />
           </div>
         </nav>
       </header>
@@ -133,18 +133,22 @@ const Header = () => {
           className="absolute text-3xl cursor-pointer right-5 top-6"
           onClick={handleMenu}
         >
-          <IoMdCloseCircleOutline />
+          <MdOutlineRestaurantMenu className="transition-all rotate-90 hover:opacity-70" />
         </div>
 
         <ul className="flex flex-col items-center justify-center h-full gap-16 text-2xl text-customblack-1 font-GrotBlack">
           <li onClick={handleMenu} className="nav-items">
-            <Link to="/">Home</Link>
+            <Link to="/" className="transition-all hover:opacity-70">
+              Home
+            </Link>
           </li>
           <li onClick={handleMenu} className="nav-items">
-            <Link to="/about">About</Link>
+            <Link to="/about" className="transition-all hover:opacity-70">
+              About
+            </Link>
           </li>
           <li onClick={handleMenu} className="relative ml-10 nav-items">
-            <Link to="/cart">
+            <Link to="/cart" className="transition-all hover:opacity-70">
               {cartItems.length > 0 ? (
                 <>
                   <span className="absolute -translate-y-1/2 top-1/2 -left-10">

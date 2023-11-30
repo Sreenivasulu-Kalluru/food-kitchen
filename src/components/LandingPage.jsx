@@ -65,7 +65,7 @@ const LandingPage = () => {
           <img
             src="/images/landingpage.webp"
             alt="img"
-            className="absolute top-0 bottom-0 left-0 right-0 block object-cover w-full h-screen lg:hidden"
+            className="absolute top-0 bottom-0 left-0 right-0 block object-cover w-full h-screen blur-[1px] lg:hidden"
           />
           <div className="relative 2xl:w-4/5">
             <div className="flex items-center gap-3 text-white lg:text-black">

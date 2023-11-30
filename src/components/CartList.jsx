@@ -39,7 +39,7 @@ const CartList = (props) => {
                       item?.card?.info?.defaultPrice / 100}
                   </span>
                   {item?.card?.info?.description && (
-                    <p className="w-9/12 mt-2 text-sm tracking-tight max-sm:hidden md:w-full text-customcolor-4">
+                    <p className="w-9/12 mt-2 text-sm tracking-tight md:w-full text-customcolor-4">
                       {item?.card?.info?.description}
                     </p>
                   )}
