@@ -78,7 +78,7 @@ const CartList = (props) => {
           </p>
           <Link
             to="/"
-            className="uppercase bg-orange-500 text-white font-ProximaNovaSemiBold mt-4 px-5 py-[11px] cursor-pointer text-[15px]"
+            className="uppercase bg-orange-400 hover:bg-orange-500 transition text-white font-ProximaNovaSemiBold mt-4 px-5 py-[11px] cursor-pointer text-[15px]"
           >
             see restaurants near you
           </Link>

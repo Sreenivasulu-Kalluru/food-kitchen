@@ -27,7 +27,7 @@ const Cart = () => {
       ) : (
         <>
           <h2 className="mb-5 text-2xl text-center font-ProximaNovaBlack md:text-3xl lg:text-4xl">
-            Welcome to Cart Page
+            Welcome to your Cart
           </h2>
           <button
             className="block w-24 mx-auto mb-3 text-sm text-white transition bg-red-600 rounded-md hover:bg-red-500 h-9 md:w-32 md:h-11 md:text-base font-ProximaNovaSemiBold"
@@ -38,6 +38,7 @@ const Cart = () => {
           <CartList items={cartItems} />
         </>
       )}
+
       <Toaster />
     </div>
   );
