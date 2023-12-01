@@ -24,8 +24,15 @@ const RestaurantMenu = () => {
     }
   };
 
-  const { name, city, cuisines, avgRating, totalRatingsString, isOpen } =
-    ResInfo;
+  const {
+    name,
+    city,
+    areaName,
+    cuisines,
+    avgRating,
+    totalRatingsString,
+    isOpen,
+  } = ResInfo;
 
   if (ResMenuInfo?.length === 0) {
     return <ShimmerMenu />;
@@ -84,7 +91,7 @@ const RestaurantMenu = () => {
             {cuisines?.join(', ')}
           </p>
           <p className="text-sm font-bold text-customcolor-5 font-ProximaNovaThin">
-            {city}
+            {areaName}, {city}
           </p>
         </div>
         {avgRating && (
