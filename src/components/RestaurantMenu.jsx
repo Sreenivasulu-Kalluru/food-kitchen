@@ -5,6 +5,7 @@ import RestaurantCategory from './RestaurantCategory';
 import ShimmerMenu from './ShimmerMenu';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
 import { useSelector } from 'react-redux';
+import { IoLocationOutline } from 'react-icons/io5';
 import Modal from './Modal';
 
 const RestaurantMenu = () => {
@@ -71,6 +72,27 @@ const RestaurantMenu = () => {
                 />
               </svg>
               <Link
+                to={`/`}
+                className="ml-1 text-sm font-medium text-customblack-1 hover:text-black md:ml-2"
+              >
+                {city}
+              </Link>
+              <svg
+                className="w-3 h-3 mx-1 text-customblack-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <Link
                 to={`/restaurants/${resId}`}
                 className="ml-1 text-sm font-medium text-customblack-1 hover:text-black md:ml-2"
               >
@@ -87,11 +109,19 @@ const RestaurantMenu = () => {
           <h2 className="mb-1 capitalize text-customcolor-6 sm:text-xl font-ProximaNovaSemiBold">
             {name}
           </h2>
-          <p className="text-sm text-customcolor-5 font-ProximaNovaThin">
-            {cuisines?.join(', ')}
+          <p className="flex items-center gap-1 text-sm text-customcolor-5 font-ProximaNovaThin">
+            <span>
+              <FontAwesomeIcon icon={faPotFood} />
+            </span>{' '}
+            <span>{cuisines?.join(', ')}</span>
           </p>
-          <p className="text-sm font-bold text-customcolor-5 font-ProximaNovaThin">
-            {areaName}, {city}
+          <p className="flex items-center gap-1 text-sm font-bold text-customcolor-5 font-ProximaNovaThin">
+            <span>
+              <IoLocationOutline />
+            </span>{' '}
+            <span>
+              {areaName}, {city}
+            </span>
           </p>
         </div>
         {avgRating && (
