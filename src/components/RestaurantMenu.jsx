@@ -6,6 +6,8 @@ import ShimmerMenu from './ShimmerMenu';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
 import { useSelector } from 'react-redux';
 import { IoLocationOutline } from 'react-icons/io5';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPotFood } from '@fortawesome/free-solid-svg-icons';
 import Modal from './Modal';
 
 const RestaurantMenu = () => {
