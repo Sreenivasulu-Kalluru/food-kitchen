@@ -6,8 +6,6 @@ import ShimmerMenu from './ShimmerMenu';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
 import { useSelector } from 'react-redux';
 import { IoLocationOutline } from 'react-icons/io5';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPotFood } from '@fortawesome/free-solid-svg-icons';
 import Modal from './Modal';
 
 const RestaurantMenu = () => {
@@ -111,11 +109,8 @@ const RestaurantMenu = () => {
           <h2 className="mb-1 capitalize text-customcolor-6 sm:text-xl font-ProximaNovaSemiBold">
             {name}
           </h2>
-          <p className="flex items-center gap-1 text-sm text-customcolor-5 font-ProximaNovaThin">
-            <span>
-              <FontAwesomeIcon icon={faPotFood} />
-            </span>{' '}
-            <span>{cuisines?.join(', ')}</span>
+          <p className="text-sm text-customcolor-5 font-ProximaNovaThin">
+            {cuisines?.join(', ')}
           </p>
           <p className="flex items-center gap-1 text-sm font-bold text-customcolor-5 font-ProximaNovaThin">
             <span>
