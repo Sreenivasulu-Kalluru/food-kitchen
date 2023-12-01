@@ -83,7 +83,7 @@ const RestaurantMenu = () => {
           <p className="text-sm text-customcolor-5 font-ProximaNovaThin">
             {cuisines?.join(', ')}
           </p>
-          <p className="text-sm font-medium text-customcolor-5 font-ProximaNovaThin">
+          <p className="text-sm font-bold text-customcolor-5 font-ProximaNovaThin">
             {city}
           </p>
         </div>
