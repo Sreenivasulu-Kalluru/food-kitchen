@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { MENU_IMG } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
