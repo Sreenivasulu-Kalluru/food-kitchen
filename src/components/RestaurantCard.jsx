@@ -63,7 +63,7 @@ const RestaurantCard = (props) => {
       <p className="text-base font-GrotThin text-customblack-2">
         {truncateCuisines(cuisines.join(', '))}
       </p>
-      <span className="text-base font-GrotThin text-customblack-2">
+      <span className="text-base font-GrotThin font-bold text-customblack-2">
         {areaName}
       </span>
     </div>
