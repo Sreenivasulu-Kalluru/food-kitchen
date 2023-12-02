@@ -73,7 +73,7 @@ const RestaurantMenu = () => {
               </svg>
               <Link
                 to={`/`}
-                className="ml-1 text-sm font-medium text-customblack-1 hover:text-black md:ml-2"
+                className="ml-1 mr-1 md:mr-2 text-sm font-medium text-customblack-1 hover:text-black md:ml-2"
               >
                 {city}
               </Link>
@@ -96,7 +96,7 @@ const RestaurantMenu = () => {
                 to={`/restaurants/${resId}`}
                 className="ml-1 text-sm font-medium text-customblack-1 hover:text-black md:ml-2"
               >
-                Restaurants
+                {name}
               </Link>
             </div>
           </li>
