@@ -16,6 +16,10 @@ const RestaurantCard = (props) => {
     return cuisines.length >= 35 ? cuisines.substring(0, 35) + '...' : cuisines;
   };
 
+  const truncateName = (name) => {
+    return name.length >= 25 ? name.substring(0, 25) + '...' : name;
+  };
+
   return (
     <div className="tracking-tight w-[330px] h-[320px] group-hover:scale-95 transition-transform">
       {isOpen ? (
@@ -36,7 +40,7 @@ const RestaurantCard = (props) => {
         </div>
       )}
       <h3 className="mt-4 text-lg md:text-xl font-GrotBold text-customblack-1">
-        {name}
+        {truncateName(name)}
       </h3>
 
       {avgRating ? (

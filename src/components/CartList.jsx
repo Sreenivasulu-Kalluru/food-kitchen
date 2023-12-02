@@ -18,12 +18,18 @@ const CartList = (props) => {
     });
   };
 
+  const truncateDescription = (description) => {
+    return description.length >= 100
+      ? description.substring(0, 100) + '...'
+      : description;
+  };
+
   return (
     <>
       {items?.length != 0 ? (
         <>
           {items?.map((item) => (
-            <div key={item?.card?.info?.id} className="menuItem">
+            <div key={item?.card?.info?.id} className="c">
               <div className="flex justify-between pt-6 pb-12">
                 <div className="categoryLeft w-[50%] mr-2 sm:w-[600px] sm:mr-0">
                   {item?.card?.info?.isVeg ? (
@@ -40,7 +46,7 @@ const CartList = (props) => {
                   </span>
                   {item?.card?.info?.description && (
                     <p className="w-9/12 mt-2 text-sm tracking-tight md:w-full text-customcolor-4">
-                      {item?.card?.info?.description}
+                      {truncateDescription(item?.card?.info?.description)}
                     </p>
                   )}
                 </div>

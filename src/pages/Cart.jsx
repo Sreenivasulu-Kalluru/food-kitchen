@@ -2,7 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import CartList from '../components/CartList';
 import { clearCart } from '../utils/cartSlice';
 import toast, { Toaster } from 'react-hot-toast';
-import Modal from '../components/Modal';
+import { toggleModal } from '../utils/toggleSlice';
+import OrderModal from '../components/OrderModal';
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cartData.items);
@@ -18,9 +19,23 @@ const Cart = () => {
     });
   };
 
+  const handleModal = () => {
+    dispatch(toggleModal());
+  };
+
+  const itemPrices = cartItems.map((item) => {
+    return (
+      item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100
+    );
+  });
+
+  const totalPrice = itemPrices.reduce((total, curr) => {
+    return total + curr;
+  }, 0);
+
   return (
     <div className="w-full min-h-screen px-3 mx-auto 2xl:w-6/12 menu-container pt-28 pb-28 md:w-10/12">
-      {ModalOpen && <Modal />}
+      {ModalOpen && <OrderModal />}
 
       {cartItems.length === 0 ? (
         <CartList items={cartItems} />
@@ -35,7 +50,24 @@ const Cart = () => {
           >
             Clear Cart
           </button>
+
+          <hr />
+
           <CartList items={cartItems} />
+
+          <hr />
+
+          <div className="flex justify-between items-center mt-4">
+            <h3 className="font-medium text-xl">
+              Total Price: ₹{Math.trunc(+totalPrice)}
+            </h3>
+            <button
+              className="uppercase bg-orange-400 hover:bg-orange-500 transition text-white font-ProximaNovaSemiBold px-5 py-[11px] cursor-pointer text-[15px]"
+              onClick={handleModal}
+            >
+              Place Order
+            </button>
+          </div>
         </>
       )}
 

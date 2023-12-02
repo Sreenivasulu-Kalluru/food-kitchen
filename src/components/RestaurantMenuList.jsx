@@ -27,6 +27,12 @@ const RestaurantMenuList = (props) => {
     }
   };
 
+  const truncateDescription = (description) => {
+    return description.length >= 100
+      ? description.substring(0, 150) + '...'
+      : description;
+  };
+
   return (
     <>
       {items?.map((item) => (
@@ -47,7 +53,7 @@ const RestaurantMenuList = (props) => {
               </span>
               {item?.card?.info?.description && (
                 <p className="mt-2 text-sm tracking-tight md:w-full sm:w-9/12 text-customcolor-4">
-                  {item?.card?.info?.description}
+                  {truncateDescription(item?.card?.info?.description)}
                 </p>
               )}
             </div>
