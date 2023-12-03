@@ -99,7 +99,7 @@ const LandingPage = () => {
                   searchData?.map((item) => (
                     <li
                       key={item?.place_id}
-                      className="cursor-pointer py-4 sm:py-6 px-3 sm:px-5 font-ProximaNovaMed text-sm sm:text-base border-dashed border-[#bebfc5] border-t-0 border-l-0 border-r-0 flex items-center gap-5"
+                      className="cursor-pointer py-4 sm:py-6 px-3 sm:px-5 font-ProximaNovaMed text-sm sm:text-base border-dashed border-[#bebfc5] border-t-0 border-l-0 border-r-0 flex items-center gap-5 hover:bg-slate-100 transition"
                       onClick={() => fetchAddress(item?.place_id)}
                     >
                       <div className="text-xl">
