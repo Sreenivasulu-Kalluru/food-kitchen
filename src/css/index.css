@@ -6,6 +6,10 @@
   display: none;
 }
 
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 @font-face {
   font-family: 'Grotesque Pro Thin';
   font-weight: 300;

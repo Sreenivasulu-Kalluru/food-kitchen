@@ -1,3 +1,4 @@
+import { Collapse } from 'react-collapse';
 import RestaurantMenuList from './RestaurantMenuList';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
@@ -7,6 +8,7 @@ const RestaurantCategory = (props) => {
   const handleItemShown = () => {
     handleShowItem();
   };
+
   return (
     <>
       {/* Accordion Header */}
@@ -23,7 +25,9 @@ const RestaurantCategory = (props) => {
       </div>
 
       {/* Accordion Body */}
-      {ShowItem && <RestaurantMenuList items={data?.itemCards} />}
+      <Collapse isOpened={ShowItem}>
+        {ShowItem && <RestaurantMenuList items={data?.itemCards} />}
+      </Collapse>
     </>
   );
 };
