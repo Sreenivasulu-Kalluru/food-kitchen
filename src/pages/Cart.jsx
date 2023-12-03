@@ -21,6 +21,7 @@ const Cart = () => {
 
   const handleModal = () => {
     dispatch(toggleModal());
+    dispatch(clearCart());
   };
 
   const itemPrices = cartItems.map((item) => {
@@ -57,8 +58,8 @@ const Cart = () => {
 
           <hr />
 
-          <div className="flex justify-between items-center mt-4">
-            <h3 className="font-medium text-xl">
+          <div className="flex items-center justify-between mt-4">
+            <h3 className="text-xl font-medium">
               Total Price: ₹{Math.trunc(+totalPrice)}
             </h3>
             <button
