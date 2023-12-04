@@ -295,7 +295,7 @@ const Home = () => {
                   value={SearchText}
                   onKeyUp={handleSearch}
                   className="filterBtn text-sm md:text-[15px] searchInput focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2"
-                  placeholder="Search"
+                  placeholder="Search Restaurant.."
                 />
               </div>
             </div>
