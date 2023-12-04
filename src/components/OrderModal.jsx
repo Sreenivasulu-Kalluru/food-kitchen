@@ -21,11 +21,11 @@ const OrderModal = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative bg-white rounded-lg shadow text-center dark:bg-gray-200 p-6 w-[80%] mx-auto">
-            <h2 className="text-xl md:text-2xl mb-4">
+            <h2 className="mb-4 text-xl md:text-2xl">
               Your Order got placed Successfully!🤩
             </h2>
 
-            <p className="text-lg mb-4">Thanks for making order from us..🌹</p>
+            <p className="mb-4 text-lg">Thanks for making order from us..🌹</p>
 
             <Link
               to="/"
