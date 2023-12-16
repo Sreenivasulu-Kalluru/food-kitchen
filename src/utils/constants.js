@@ -1,4 +1,4 @@
-const CORSPROXY = 'https://corsproxy.io/?';
+const CORSPROXY = 'https://proxy.cors.sh/';
 
 export const LOCATION_API = `${CORSPROXY}https://www.swiggy.com/dapi/misc/place-autocomplete?input=`;
 
